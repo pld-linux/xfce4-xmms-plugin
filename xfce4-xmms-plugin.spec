@@ -1,5 +1,5 @@
 Summary:	xfce4-xmms-plugin is an XMMS Control plugin
-Summary(pl):	xfce4-xmms-plugin to wtyczka do kontroli XMMS
+Summary(pl):	xfce4-xmms-plugin to wtyczka do kontroli XMMS-a
 Name:		xfce4-xmms-plugin
 Version:	0.1.1
 Release:	2
@@ -15,10 +15,10 @@ Requires:	xfce4-panel >= 3.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Plugin which provide you control on xmms from xfce4-panel.
+Plugin which provide you control on XMMS from xfce4-panel.
 
 %description -l pl
-Wtyczka która umo¿liwia kontrolê nad xmms z pozycji panelu xfce.
+Wtyczka która umo¿liwia kontrolê nad XMMS-em z pozycji panelu xfce.
 
 %prep
 %setup -q
