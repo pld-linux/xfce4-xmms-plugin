@@ -24,6 +24,7 @@ Wtyczka która umo¿liwia kontrolê nad xmms z pozycji panelu xfce.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure \
 	--disable-static
 
