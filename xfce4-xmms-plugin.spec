@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Plugin which provide you control on xmms from xfce4-panel.
 
 %description -l pl
-Wtyczka która umo¿liwia kontrole nad xmms z pozycji panelu xfce.
+Wtyczka która umo¿liwia kontrolê nad xmms z pozycji panelu xfce.
 
 %prep
 %setup -q
