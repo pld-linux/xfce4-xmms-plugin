@@ -2,7 +2,7 @@ Summary:	XMMS Control plugin
 Summary(pl):	Wtyczka do kontroli XMMS-a
 Name:		xfce4-xmms-plugin
 Version:	0.1.1
-Release:	3
+Release:	4
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
 Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.bz2
