@@ -9,6 +9,7 @@ Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.bz2
 # Source0-md5:	7d852c49b74170cd662afabd86f40e8d
 URL:		http://xfce-goodies.berlios.de/
 BuildRequires:	automake
+BuildRequires:	pkgconfig
 BuildRequires:	xfce4-panel-devel >= 3.99.2
 BuildRequires:	xmms
 BuildRequires:	xmms-devel
