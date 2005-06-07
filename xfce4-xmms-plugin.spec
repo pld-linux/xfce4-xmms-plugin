@@ -1,18 +1,20 @@
 Summary:	XMMS Control plugin
 Summary(pl):	Wtyczka do kontroli XMMS-a
 Name:		xfce4-xmms-plugin
-Version:	0.1.1
-Release:	4
+Version:	0.3.1
+Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
 Source0:	http://download.berlios.de/xfce-goodies/%{name}-%{version}.tar.bz2
-# Source0-md5:	7d852c49b74170cd662afabd86f40e8d
+# Source0-md5:	0dac8795b192383c13b1d5cd072b754a
 URL:		http://xfce-goodies.berlios.de/
 BuildRequires:	automake
+BuildRequires:	pango >= 1:1.8.0
 BuildRequires:	pkgconfig
 BuildRequires:	xfce4-panel-devel >= 3.99.2
 BuildRequires:	xmms
 BuildRequires:	xmms-devel
+Requires:	pango >= 1:1.8.0
 Requires:	xfce4-panel >= 3.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,7 +28,7 @@ Wtyczka która umo¿liwia kontrolê nad XMMS-em z pozycji panelu Xfce.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub .
+#cp -f /usr/share/automake/config.sub .
 %configure \
 	--disable-static
 
@@ -40,10 +42,12 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/panel-plugins/*.la
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog COPYING README
 %attr(755,root,root) %{_libdir}/xfce4/panel-plugins/*.so
