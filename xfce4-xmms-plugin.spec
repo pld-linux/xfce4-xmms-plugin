@@ -10,6 +10,7 @@ Source0:	http://goodies.xfce.org/releases/xfce4-xmms-plugin/%{name}-%{version}.t
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-xmms-plugin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	intltool
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	xfce4-dev-tools >= 4.4.0
