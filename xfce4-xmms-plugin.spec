@@ -1,12 +1,12 @@
 Summary:	XMMS, BMP or Audacious player control plugin
 Summary(pl.UTF-8):	Wtyczka do kontroli odtwarzacza XMMS, BMP lub Audacious
 Name:		xfce4-xmms-plugin
-Version:	0.5.1
-Release:	2
+Version:	0.5.2
+Release:	1
 License:	BSD-like (see COPYING)
 Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfce4-xmms-plugin/%{name}-%{version}.tar.bz2
-# Source0-md5:	e2e48ba8f2de32e4fd7ab09083458e3f
+# Source0-md5:	2fe5a7d79c3aeb6c62495ce5c2cfd51c
 URL:		http://goodies.xfce.org/projects/panel-plugins/xfce4-xmms-plugin
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -15,6 +15,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	xfce4-dev-tools >= 4.4.0
 BuildRequires:	xfce4-panel-devel >= 4.4.0
+Requires:	xfce4-panel >= 4.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,6 +46,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+mv $RPM_BUILD_ROOT%{_datadir}/locale/pt{_PT,}
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xfce4/panel-plugins/*.la
 
